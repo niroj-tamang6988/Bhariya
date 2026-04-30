@@ -1,8 +1,8 @@
 import './App.css'
-import DashboardPage from "./Pages/DashboardPage"
+import Navbar from "./Components/Navbar"
 import { Routes, Route } from "react-router-dom";
 import CreateShipmentPage from './Pages/CreateShipmentPage';
-
+import ForBusinessPage from "./Pages/ForBusinessPage";
 
 function App() {
   
@@ -10,10 +10,11 @@ function App() {
   return (
     <>
     <Routes>
-      <Route path="/" element={<DashboardPage/>} />
-      <Route path="/DashboardPage" element={<DashboardPage/>} />
-      <Route path="/CreateShipmentPage" element={<CreateShipmentPage/>} />
-      </Routes>
+      <Route path="/" element={<Navbar/>} />
+      <Route path="/Create ShipmentPage" element={<CreateShipmentPage/>} />
+      <Route path="/ForBusiness" element={<ForBusinessPage/>} />
+
+    </Routes>
     </>
   )
 }

@@ -2,6 +2,7 @@ import HomePage from "./HomePage"
 import CreateShipmentPage from "./CreateShipmentPage"
 import Navbar from "../Components/Navbar"
 import { useState } from "react";
+import ForBusinessPage from "./ForBusinessPage";
 
 
 function DashboardPage(){
@@ -23,7 +24,7 @@ function DashboardPage(){
                 <main >
                  {activeModule === "Home" && <HomePage/>}
                  {activeModule ==="Create Shipment" && <CreateShipmentPage/>}
-                 
+                 {activeModule === "For Business" && <ForBusinessPage/>}
                   </main>
                 
 

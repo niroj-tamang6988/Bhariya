@@ -1,4 +1,7 @@
 import { NavbarDetails } from "../Config/data.ts"
+import HomePage from "../Pages/HomePage.tsx"
+import CreateShipmentPage from "../Pages/CreateShipmentPage"
+import ForBusinessPage from "../Pages/ForBusinessPage"
 
 
 //parent component
@@ -10,14 +13,16 @@ type NavbarProps = {
 
 //child component
 function Navbar ( {activeModule, onSelect }: NavbarProps){
-
-
-
+    <main >
+        {activeModule === "Home" && <HomePage/>}
+        {activeModule ==="Create Shipment" && <CreateShipmentPage/>}
+        {activeModule === "For Business" && <ForBusinessPage/>}
+    </main>
 
     return(
         <>
         <header className="fixed top-0 w-full bg-[rgba(11,11,12,0.9)] backdrop-blur-[10px] border-b border-[rgba(212,175,55,0.2)] z-[1000] px-8 py-4">
-        <nav className="max-w-[1200px] mx-auto flex justify-between items-center flex-wrap gap-4 relative">
+        <nav className="max-w-300 mx-auto flex justify-between items-center flex-wrap gap-4 relative">
 
            {/* logo */}
         <div className="inline-flex items-center gap-3 font-[Poppins] text-2xl font-bold text-[#D4AF37] no-underline">
@@ -41,8 +46,7 @@ function Navbar ( {activeModule, onSelect }: NavbarProps){
            ))}
            </div>
         </nav>
-        </header>
-        
+        </header>   
         </>
     )
 }
