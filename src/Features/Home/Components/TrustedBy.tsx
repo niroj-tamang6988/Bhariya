@@ -3,7 +3,7 @@ function TrustedBy (){
 
     return(
 <>
-<section className="py-25 px-5 bg-linear-to-b from-[#0B0B0C]  text-[#F5F5F5]">
+<section className="py-25 px-5 bg-linear-to-b from-[#0B0B0C] h text-[#F5F5F5]">
 <div className="my-[60px] text-center">
             <h3 className="text-[#D4AF37] mb-5 font-[Poppins],sans-serif">Trusted by Businesses Worldwide</h3>
             <div className="grid grid-cols-3 gap-6 mb-[40px]">
