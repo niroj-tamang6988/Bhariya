@@ -1,22 +1,21 @@
 import { Route, Routes } from "react-router-dom"
 import Navbar from "../Components/Navbar"
+import HomePage from "../Pages/HomePage"
+import CreateShipmentPage from "../Pages/CreateShipmentPage"
+import ForBusinessPage from "../Pages/ForBusinessPage"
 
-
-function RoutePage({activeModule, onSelect} :Navbarprops) {
-
-
-    return(
-
+function RoutePage() {
+    return (
         <>
-        <Routes>
-      <Route path="/" element={<Navbar/>} />
-      <Route path="/Create ShipmentPage" element={<CreateShipmentPage/>} />
-      <Route path="/ForBusiness" element={<ForBusinessPage/>} />
-
-    </Routes>
-
-
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/DashboardPage" element={<HomePage />} />
+                <Route path="/CreateShipmentPage" element={<CreateShipmentPage />} />
+                <Route path="/ForBusinessPage" element={<ForBusinessPage />} />
+            </Routes>
         </>
     )
 }
+
 export default RoutePage

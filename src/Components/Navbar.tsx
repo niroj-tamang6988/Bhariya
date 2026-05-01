@@ -1,53 +1,40 @@
+import { useState } from "react"
+import { Link } from "react-router-dom"
 import { NavbarDetails } from "../Config/data.ts"
-import HomePage from "../Pages/HomePage.tsx"
-import CreateShipmentPage from "../Pages/CreateShipmentPage"
-import ForBusinessPage from "../Pages/ForBusinessPage"
 
-
-//parent component
-type NavbarProps = {
-    activeModule: string;
-    onSelect: (module: string) => void;
+const navRoutes: Record<string, string> = {
+    "Home": "/",
+    "Create Shipment": "/CreateShipmentPage",
+    "Track Package": "/TrackPage",
+    "For Business": "/ForBusinessPage",
+    "Support": "/Support",
+    "Login": "/Login",
 }
 
+function Navbar() {
+    const [activeNav, setActiveNav] = useState("Home")
 
-//child component
-function Navbar ( {activeModule, onSelect }: NavbarProps){
-    <main >
-        {activeModule === "Home" && <HomePage/>}
-        {activeModule ==="Create Shipment" && <CreateShipmentPage/>}
-        {activeModule === "For Business" && <ForBusinessPage/>}
-    </main>
-
-    return(
-        <>
+    return (
         <header className="fixed top-0 w-full bg-[rgba(11,11,12,0.9)] backdrop-blur-[10px] border-b border-[rgba(212,175,55,0.2)] z-[1000] px-8 py-4">
-        <nav className="max-w-300 mx-auto flex justify-between items-center flex-wrap gap-4 relative">
-
-           {/* logo */}
-        <div className="inline-flex items-center gap-3 font-[Poppins] text-2xl font-bold text-[#D4AF37] no-underline">
-            <a href="#" className="hover:text-yellow-400">Bhariyaa </a>
-            </div>
-
-            <div className=" flex gap-5 item-center pr-20 ">
-            {/* Links */}
-           {NavbarDetails.map((nav) => (
-
-            <button 
-                key={nav}
-                type="button"
-                onClick={() => onSelect(nav)}
-                className={`text-[15px] px-3 py-2 rounded-md text-sm font-medium hover:text-yellow-400 
-                     ${ activeModule === nav ? "text-yellow-400" : "text-white"  //making yellow if active module is....
-                }`}
-            >
-                {nav}
-            </button>
-           ))}
-           </div>
-        </nav>
-        </header>   
-        </>
+            <nav className="max-w-300 mx-auto flex justify-between items-center flex-wrap gap-4 relative">
+                <div className="inline-flex items-center gap-3 font-[Poppins] text-2xl font-bold text-[#D4AF37] no-underline">
+                    <Link to="/" className="hover:text-yellow-400">Bhariyaa</Link>
+                </div>
+                <div className="flex gap-5 items-center pr-20">
+                    {NavbarDetails.map((nav) => (
+                        <Link
+                            key={nav}
+                            to={navRoutes[nav] ?? "/"}
+                            onClick={() => setActiveNav(nav)}
+                            className={`px-3 py-2 rounded-md text-sm font-medium hover:text-yellow-400 
+                                ${activeNav === nav ? "text-yellow-400" : "text-white"}`}
+                        >
+                            {nav}
+                        </Link>
+                    ))}
+                </div>
+            </nav>
+        </header>
     )
 }
 

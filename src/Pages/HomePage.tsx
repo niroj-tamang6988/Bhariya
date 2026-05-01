@@ -9,10 +9,12 @@ function HomePage(){
 
     return(
         <>
+        <div className="bg-[#0B0B0C] ">
         <HeroSection/>
         <CoverageSection/>
         <TrustedBy/>
         <Footer/>
+        </div>
         </>
     )
 }

@@ -4,7 +4,7 @@ function HeroSection () {
 
     return(
     <>
-      <section className="h-100vh flex flex-column justify-center items-center text-center relative bg-[#111111] overflow-hidden p-(0 20px) before:content-[''] before:absolute before:inset-0 before:bg-[url('data:image/svg+xml;base64,...')] before:bg-center before:bg-cover before:animate-spinSlow" >
+      <section className="h-100vh flex flex-column justify-center items-center text-center relative bg-[#0B0B0C]  overflow-hidden p-(0 20px) before:content-[''] before:absolute before:inset-0 before:bg-[url('data:image/svg+xml;base64,...')] before:bg-center before:bg-cover before:animate-spinSlow" >
         <div className="relative z-10 max-w-[800px] px-">      
           <h1 className="font-[Playfair_Display] text-[3rem] font-bold text-[#D4AF37] mb-5 [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)]">Fast, Reliable International Courier Delivery</h1>
           <p className="text-[1.2rem] mb-10 text-[#A1A1AA] leading-relaxed">Express and standard shipments across Australia, America, Europe and beyond, backed by customs clearance support, package insurance, guaranteed delivery windows, and 24/7 assistance.</p>
