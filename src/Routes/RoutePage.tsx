@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar"
 import HomePage from "../Pages/HomePage"
 import CreateShipmentPage from "../Pages/CreateShipmentPage"
 import ForBusinessPage from "../Pages/ForBusinessPage"
+import SupportPage from "../Pages/SupportPage"
 
 function RoutePage() {
     return (
@@ -13,6 +14,8 @@ function RoutePage() {
                 <Route path="/DashboardPage" element={<HomePage />} />
                 <Route path="/CreateShipmentPage" element={<CreateShipmentPage />} />
                 <Route path="/ForBusinessPage" element={<ForBusinessPage />} />
+                {/* |<Route path="/TrackPage" element={<TrackPage />} /> */}
+                <Route path="/Support" element={<SupportPage/>} />
             </Routes>
         </>
     )
