@@ -4,8 +4,8 @@ function SupportPage() {
 
     return(
         <>
-        
-        <div className="max-w-[1200px] mx-auto py-20 px-5 text-center">
+        <div className="bg-[#0B0B0C] min-h-screen ">
+        <div className="max-w-300 mx-auto py-20 px-5 text-center">
 
     
     <h1 className="font-[Poppins] text-5xl font-bold text-[#D4AF37] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
@@ -84,6 +84,7 @@ function SupportPage() {
         </div>
 
     </div>
+</div>
 </div>
         
         

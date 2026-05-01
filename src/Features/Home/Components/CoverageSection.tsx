@@ -5,7 +5,7 @@ function CoverageSection (){
 
     return(
         <>
-         <section className="py-25 px-5 bg-linear-to-b from-[#0B0B0C] to-[#111111] text-[#F5F5F5]">
+         <section className="py-25 px-5 bg-[#0B0B0C] text-[#F5F5F5]">
         <div className="max-w-[1000px] mx-auto mb-[50px] text-center" >
             <h2 className="font-[Poppins] text-[2.5rem] font-bold text-[#D4AF37] mb-[60px] [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)]" >International Coverage & Service Promise</h2>
             <p className="max-w-190 mx-auto text-[#A1A1AA] leading-[1.7] text-[1.05rem]">Bhariyaa connects your consignments to the world with reliable handling, customs expertise, and tiered delivery options so every shipment moves confidently from door to door.</p>

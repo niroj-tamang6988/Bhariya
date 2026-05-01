@@ -15,7 +15,7 @@ function Navbar() {
     const [activeNav, setActiveNav] = useState("Home")
 
     return (
-        <header className="fixed top-0 w-full bg-[rgba(11,11,12,0.9)] backdrop-blur-[10px] border-b border-[rgba(212,175,55,0.2)] z-[1000] px-8 py-4">
+        <header className="fixed top-0 w-full bg-[rgba(11,11,12,0.9)] backdrop-blur-[10px] border-b  border-[rgba(212,175,55,0.2)] z-[1000] px-8 py-4">
             <nav className="max-w-300 mx-auto flex justify-between items-center flex-wrap gap-4 relative">
                 <div className="inline-flex items-center gap-3 font-[Poppins] text-2xl font-bold text-[#D4AF37] no-underline">
                     <Link to="/" className="hover:text-yellow-400">Bhariyaa</Link>

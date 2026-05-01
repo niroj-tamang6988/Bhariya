@@ -4,7 +4,6 @@ function ContentPage() {
 
     return(
         <>
-        <div >
         <section className="py-25 px-5 bg-[#0B0B0C] text-center">
             <h2 className="font-[Poppins] text-[2.5rem] font-bold text-[#D4AF37] mb-[20px] [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)]">Create Your Shipment</h2>
             
@@ -35,7 +34,6 @@ function ContentPage() {
                 </div>
                 </div>
                 </section>
-            </div>
         
         </>
 
