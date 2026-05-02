@@ -1,44 +1,52 @@
+import { useState } from "react"
+import Register from "./Register"
 
+function Login() {
+    const [activeTab, setActiveTab] = useState<"login" | "register">("login")
 
-function Login () {
-
-
-
-    return(
-
-        <>
-        
-        <div className="login-modal" id="login-modal">
-        <div className="login-modal-content">
-            <button className="login-modal-close" id="login-modal-close">&times;</button>
-            <div className="login-modal-header">
-                <h2>Welcome to Bhariyaa</h2>
-                <p>Sign in to your account or create a new one</p>
-            </div>
-
-            <div className="login-tabs">
-                <div className="login-tab active" id="login-tab">Login</div>
-                <div className="login-tab" id="register-tab">Register</div>
-            </div>
-
-            
-            <form className="login-form active" id="login-form">
-                <div className="form-group">
-                    <label >Email or Mobile Number</label>
-                    <input type="text" id="login-identifier" placeholder="Enter your email or mobile number" required/>
+    return (
+        <div className="flex fixed top-0 left-0 w-full h-full bg-black/80 z-[2000] backdrop-blur-sm justify-center items-center">
+            <div className="bg-[#111111]/95 backdrop-blur-xl border border-[#d4af37]/30 rounded-2xl p-8 w-[90%] max-w-[400px] relative shadow-2xl">
+                <div className="text-center mb-[2rem]">
+                    <h2 className="font-serif text-[#D4AF37] mb-[0.5rem]">Welcome to Bhariyaa</h2>
+                    <p className="text-[#A1A1AA] text-[0.9rem]">Sign in to your account or create a new one</p>
                 </div>
-                <div className="form-group">
-                    <label >Password</label>
-                    <input type="password" id="login-password" placeholder="Enter your password" required/>
+
+                <div className="flex gap-4 mb-6">
+                    <button onClick={() => setActiveTab("login")}
+                        className={`flex-1 py-2 rounded-lg font-semibold transition-colors duration-300 ${activeTab === "login" ? "bg-[#D4AF37] text-[#0B0B0C]" : "text-[#A1A1AA] border border-[#D4AF37]/30"}`}>
+                        Login
+                    </button>
+                    <button onClick={() => setActiveTab("register")}
+                        className={`flex-1 py-2 rounded-lg font-semibold transition-colors duration-300 ${activeTab === "register" ? "bg-[#D4AF37] text-[#0B0B0C]" : "text-[#A1A1AA] border border-[#D4AF37]/30"}`}>
+                        Register
+                    </button>
                 </div>
-                <button type="submit" className="login-btn-submit" id="login-submit-btn">Sign In</button>
-                <div className="switch-form">
-                    Don't have an account? <a href="#" id="switch-to-register">Create one</a>
-                </div>
-            </form>
+
+                {activeTab === "login" ? (
+                    <form className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-1">
+                            <label className="text-[#A1A1AA] text-sm">Email or Mobile Number</label>
+                            <input type="text" placeholder="Enter your email or mobile number" required
+                                className="px-3 py-2 bg-[#0B0B0C] border border-[#D4AF37]/30 rounded-lg text-[#F5F5F5] focus:outline-none focus:border-[#D4AF37]"/>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                            <label className="text-[#A1A1AA] text-sm">Password</label>
+                            <input type="password" placeholder="Enter your password" required
+                                className="px-3 py-2 bg-[#0B0B0C] border border-[#D4AF37]/30 rounded-lg text-[#F5F5F5] focus:outline-none focus:border-[#D4AF37]"/>
+                        </div>
+                        <button type="submit" className="bg-[#D4AF37] text-[#0B0B0C] py-2 rounded-lg font-semibold hover:bg-[#B8952A] transition-colors duration-300">
+                            Sign In
+                        </button>
+                        <p className="text-center text-[#A1A1AA] text-sm">
+                            Don't have an account? <span onClick={() => setActiveTab("register")} className="text-[#D4AF37] cursor-pointer">Create one</span>
+                        </p>
+                    </form>
+                ) : (
+                    <Register onSwitch={() => setActiveTab("login")} />
+                )}
             </div>
-            </div>
-            </>
+        </div>
     )
 }
 

@@ -4,6 +4,7 @@ import HomePage from "../Pages/HomePage"
 import CreateShipmentPage from "../Pages/CreateShipmentPage"
 import ForBusinessPage from "../Pages/ForBusinessPage"
 import SupportPage from "../Pages/SupportPage"
+import LoginPage from "../Pages/LoginPage"
 import Footer from "../Components/Footer"
 
 function RoutePage() {
@@ -17,6 +18,7 @@ function RoutePage() {
                 <Route path="/ForBusinessPage" element={<ForBusinessPage />} />
                 {/* |<Route path="/TrackPage" element={<TrackPage />} /> */}
                 <Route path="/Support" element={<SupportPage/>} />
+                <Route path="/Login" element={<LoginPage/>} />
             </Routes>
             <Footer />
         </>
