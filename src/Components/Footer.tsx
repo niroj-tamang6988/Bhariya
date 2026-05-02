@@ -106,15 +106,18 @@ function Footer() {
                 </div>
             </div>
 
-            <div >
-                <div >
-                    <p >
+            <div className="border-t border-[#d4af37]/10 p-8 bg-[#0B0B0C]/50" >
+                <div className="max-w-[1200px] mx-auto flex justify-between items-center flex-wrap gap-4">
+                    <p className="text-[#A1A1AA] text-[0.9rem] m-0">
                         &copy; 2026 Bhariyaa International Courier. All rights reserved.
                     </p>
-                    <div >
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Cookie Policy</a>
+                    <div className="flex gap-8">
+                        <a href="#" className="text-[#A1A1AA] no-underline text-[0.9rem] transition-colors duration-300 ease-in-out hover:text-[#D4AF37]">
+                            Privacy Policy</a>
+                        <a href="#" className="text-[#A1A1AA] no-underline text-[0.9rem] transition-colors duration-300 ease-in-out hover:text-[#D4AF37]">
+                            Terms of Service</a>
+                        <a href="#" className="text-[#A1A1AA] no-underline text-[0.9rem] transition-colors duration-300 ease-in-out hover:text-[#D4AF37]">
+                            Cookie Policy</a>
                     </div>
                 </div>
             </div>
