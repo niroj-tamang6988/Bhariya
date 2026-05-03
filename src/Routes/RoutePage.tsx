@@ -6,6 +6,7 @@ import ForBusinessPage from "../Pages/ForBusinessPage"
 import SupportPage from "../Pages/SupportPage"
 import LoginPage from "../Pages/LoginPage"
 import Footer from "../Components/Footer"
+import TrackPackagePage from "../Pages/TrackPackagePage"
 
 function RoutePage() {
     return (
@@ -19,6 +20,7 @@ function RoutePage() {
                 {/* |<Route path="/TrackPage" element={<TrackPage />} /> */}
                 <Route path="/Support" element={<SupportPage/>} />
                 <Route path="/Login" element={<LoginPage/>} />
+                <Route path="/TrackPage" element={< TrackPackagePage/>}/>
             </Routes>
             <Footer />
         </>
