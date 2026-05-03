@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useLocation } from "react-router-dom"
+import { useEffect } from "react"
 import Navbar from "../Components/Navbar"
 import HomePage from "../Pages/HomePage"
 import CreateShipmentPage from "../Pages/CreateShipmentPage"
@@ -9,6 +10,11 @@ import Footer from "../Components/Footer"
 import TrackPackagePage from "../Pages/TrackPackagePage"
 
 function RoutePage() {
+    const location = useLocation()
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [location.pathname])
     return (
         <>
             <Navbar />

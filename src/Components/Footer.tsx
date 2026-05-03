@@ -1,8 +1,13 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { RiFacebookBoxFill } from "react-icons/ri";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+import { TiSocialYoutube } from "react-icons/ti";
 
 function Footer() {
 
-
+  const navigate = useNavigate()
     return(
         <>
         <footer  className=" mt-30 bg-[#0B0B0C] relative overflow-hidden  bg-[linear-gradient(135deg,#0B0B0C_0%,#111111_100%)] border-t border-[rgba(212,175,55,0.2)] before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-[1px] before:bg-[linear-gradient(90deg,transparent,#D4AF37,transparent)]" >
@@ -18,11 +23,26 @@ function Footer() {
                         Your premium international courier service partner.
                     </p>
                     <div className="flex gap-4" >
-                        <a href="#" className="flex items-center justify-center w-10 h-10 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full text-[#D4AF37] no-underline text-[1.2rem] transition-all duration-300 hover:bg-[#D4AF37] hover:text-[#0B0B0C] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(212,175,55,0.3)]" title="Facebook" aria-label="Facebook">📘</a>
-                        <a href="#" className="flex items-center justify-center w-10 h-10 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full text-[#D4AF37] no-underline text-[1.2rem] transition-all duration-300 hover:bg-[#D4AF37] hover:text-[#0B0B0C] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(212,175,55,0.3)]" title="Twitter" aria-label="Twitter">🐦</a>
-                        <a href="#" className="flex items-center justify-center w-10 h-10 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full text-[#D4AF37] no-underline text-[1.2rem] transition-all duration-300 hover:bg-[#D4AF37] hover:text-[#0B0B0C] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(212,175,55,0.3)]" title="LinkedIn" aria-label="LinkedIn">💼</a>
-                        <a href="#" className="flex items-center justify-center w-10 h-10 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full text-[#D4AF37] no-underline text-[1.2rem] transition-all duration-300 hover:bg-[#D4AF37] hover:text-[#0B0B0C] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(212,175,55,0.3)]" title="Instagram" aria-label="Instagram">📷</a>
-                        <a href="#" className="flex items-center justify-center w-10 h-10 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full text-[#D4AF37] no-underline text-[1.2rem] transition-all duration-300 hover:bg-[#D4AF37] hover:text-[#0B0B0C] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(212,175,55,0.3)]" title="YouTube" aria-label="YouTube">📺</a>
+                        <a href="https://www.facebook.com" target="_blank" className="flex items-center justify-center w-10 h-10 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full text-[#D4AF37] no-underline text-[1.2rem] transition-all duration-300 hover:bg-[#D4AF37] hover:text-[#0B0B0C] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(212,175,55,0.3)]"
+                         title="Facebook" 
+                        aria-label="Facebook"><RiFacebookBoxFill />
+                        </a>
+                        <a href="https://www.x.com" target="_blank" className="flex items-center justify-center w-10 h-10 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full text-[#D4AF37] no-underline text-[1.2rem] transition-all duration-300 hover:bg-[#D4AF37] hover:text-[#0B0B0C] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(212,175,55,0.3)]" 
+                        title="Twitter" 
+                        aria-label="Twitter">
+                        <FaXTwitter /></a>
+                        <a href="https://www.linkedin.com" target="_blank" className="flex items-center justify-center w-10 h-10 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full text-[#D4AF37] no-underline text-[1.2rem] transition-all duration-300 hover:bg-[#D4AF37] hover:text-[#0B0B0C] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(212,175,55,0.3)]" 
+                        title="LinkedIn"
+                         aria-label="LinkedIn">
+                        <FaLinkedin /></a>
+                        <a href="https://www.instagram.com" target="_blank" className="flex items-center justify-center w-10 h-10 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full text-[#D4AF37] no-underline text-[1.2rem] transition-all duration-300 hover:bg-[#D4AF37] hover:text-[#0B0B0C] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(212,175,55,0.3)]" 
+                        title="Instagram"
+                         aria-label="Instagram">
+                        <FaInstagram /></a>
+                        <a href="https://www.youtube.com" target="_blank" className="flex items-center justify-center w-10 h-10 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full text-[#D4AF37] no-underline text-[1.2rem] transition-all duration-300 hover:bg-[#D4AF37] hover:text-[#0B0B0C] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(212,175,55,0.3)]"
+                         title="YouTube" 
+                        aria-label="YouTube">
+                        <TiSocialYoutube /></a>
                     </div>
                 </div>
 
@@ -31,17 +51,16 @@ function Footer() {
                         after:content-[''] after:absolute after:-bottom-1.25 after:left-0 after:w-7.5 after:h-0.5 after:bg-[#D4AF37] after:rounded-sm">
                         Quick Links</h3>
                     <ul className="list-none p-0 m-0" >
-                        <li className="mb-3"><Link to="/DashboardPage" className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]" 
-                                  > Home</Link></li>
-                        <li className="mb-3"><Link to="/CreateShipmentPage" className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]" 
-                                           > Create Shipment</Link></li>
-                        <li className="mb-3"><Link to="/TrackPage" className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]" 
-                                           > Track Package</Link></li>
-                        <li className="mb-3"><a className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]" 
-                                             href="business.html">   For Businesses</a></li>
-                        <li className="mb-3"><a className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]"
-                                            href="support.html">   Support</a></li> 
-                                               
+                        <li className="mb-3"><button onClick={() => navigate("/")} className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]">
+                            Home</button></li>
+                        <li className="mb-3"><button onClick={() => navigate("/CreateShipmentPage")} className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]">
+                            Create Shipment</button></li>
+                        <li className="mb-3"><button onClick={() => navigate("/TrackPage")} className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]">
+                            Track Package</button></li>
+                        <li className="mb-3"><button onClick={() => navigate("/ForBusinessPage")} className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]">
+                            For Businesses</button></li>
+                        <li className="mb-3"><button onClick={() => navigate("/Support")} className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]">
+                            Support</button></li>
                     </ul>
                 </div>
 
@@ -51,20 +70,17 @@ function Footer() {
                             Services</h3>
                     <ul className="list-none p-0 m-0" >
                         <li className="mb-3">
-                                <a className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]" 
-                                 href="shipment.html">Express Shipping</a></li>
+                                <button onClick={() => navigate("/CreateShipmentPage")} className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]" 
+                                >Express Shipping</button></li>
                         <li className="mb-3" >
-                                <a className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]"  href="shipment.html">
-                                    Normal Shipping</a></li>
+                                <button onClick={() => navigate("/CreateShipmentPage")} className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]"  href="shipment.html">
+                                    Normal Shipping</button></li>
                         <li className="mb-3" >
-                                <a className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]" href="shipment.html">
-                                        Standard Shipping</a></li>
+                                <button onClick={() => navigate("/CreateShipmentPage")} className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]" href="shipment.html">
+                                        Standard Shipping</button></li>
                         <li className="mb-3">
-                                <a className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]" href="business.html">
-                                        Business Solutions</a></li>
-                        <li className="mb-3" >
-                                <a className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]" href="business.html">
-                                    API Integration</a></li>
+                                <button onClick={() => navigate("/ForBusinessPage")} className="relative text-[#A1A1AA] no-underline text-[0.95rem] transition-all duration-300 hover:text-[#D4AF37] hover:pl-2 before:content-[''] before:absolute before:left-[-10px] before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-0 before:bg-[#D4AF37] before:transition-all before:duration-300 hover:before:w-[6px]" href="business.html">
+                                        Business Solutions</button></li>
                     </ul>
                 </div>
 
