@@ -4,10 +4,7 @@ function LoginPage () {
 
 
     return(
-
-
         <>
-        
         <Login/>
         </>
     )
