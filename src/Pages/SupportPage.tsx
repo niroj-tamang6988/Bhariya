@@ -4,7 +4,7 @@ function SupportPage() {
 
     return(
         <>
-        <div className="bg-white min-h-screen ">
+        <div className="bg-white mt-10 min-h-screen ">
         <div className="max-w-300 mx-auto py-20 px-5 text-center">
 
     

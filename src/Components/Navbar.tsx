@@ -1,5 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom"
 import { NavbarDetails } from "../Config/data.ts"
+import bhariya from "../assets/bhariya.png"
 
 const navRoutes: Record<string, string> = {
     "Home": "/",
@@ -15,11 +16,10 @@ function Navbar() {
     const location = useLocation()
 
     return (
-        <header className="fixed top-0 w-full bg-[#f8f8f8 backdrop-blur-[10px] border-b  border-[rgba(212,175,55,0.2)] z-[1000] px-8 py-4">
+        <header className="fixed top-0 w-full bg-[#f8f8f8] backdrop-blur-[10px] border-b border-[rgba(212,175,55,0.2)] z-[1000] px-8 py-4">
             <nav className="max-w-300 mx-auto flex justify-between items-center flex-wrap gap-4 relative">
-                <div className="inline-flex items-center gap-3 font-[Poppins] text-2xl font-bold text-[#ffbf00] no-underline">
-                    <span onClick={() => navigate("/")} className="cursor-pointer hover:text-yellow-400">
-                        Bhariyaa</span>
+                <div className="inline-flex items-center gap-3 no-underline">
+                    <img src={bhariya} alt="Bhariyaa" className="h-15 w-20 cursor-pointer" onClick={() => navigate("/")} />
                 </div>
                 <div className="flex gap-5 items-center pr-20">
                     {NavbarDetails.map((nav) => (
